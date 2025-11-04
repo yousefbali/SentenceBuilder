@@ -16,6 +16,12 @@ import org.example.core.SuggestionService;
 
 import java.util.List;
 
+/**
+Compose view: main text area + suggestions + algorithm selector.
+notes
+  - The ComboBox 'algorithmSelector' is where users choose which algorithm to use.
+  - Later, we can route to different alg implementations based on the selected value from algorithmSelector.
+ */
 public class ComposeView {
     private final SuggestionService suggestions;
     private final SentenceGenerator generator;
@@ -25,27 +31,46 @@ public class ComposeView {
     private final FlowPane suggestionBar = new FlowPane(8, 8);
     private final PauseTransition debounce = new PauseTransition(Duration.millis(250));
 
+    // Dropdown for selecting algorithm
+    private final ComboBox<String> algorithmSelector = new ComboBox<>();
+
     public ComposeView(SuggestionService suggestions, SentenceGenerator generator) {
         this.suggestions = suggestions;
         this.generator = generator;
 
+        // --- Algorithm selector setup ---
+        // TODO:
+        //  - Use algorithmSelector.getValue() in doGenerate() / updateSuggestions() to pick which LanguageModel implementation to use.
+        algorithmSelector.getItems().addAll(
+                "N-gram (current )",
+                "alg 1",
+                "alg 2"
+        );
+        algorithmSelector.getSelectionModel().selectFirst();
+        algorithmSelector.setPrefWidth(200);
+
+        // --- Generate button ---
         Button genBtn = new Button("Generate (Ctrl+Enter)");
         genBtn.setOnAction(e -> doGenerate());
 
-        HBox toolbar = new HBox(8, genBtn);
+        // Toolbar: Algorithm dropdown + Generate button
+        Label algoLabel = new Label("Algorithm:");
+        HBox toolbar = new HBox(8, algoLabel, algorithmSelector, genBtn);
         toolbar.setPadding(new Insets(10));
         root.setTop(toolbar);
 
+        // --- Text area + suggestions ---
         input.setPromptText("Type here…");
         input.setWrapText(true);
         input.setPrefRowCount(12);
 
-        suggestionBar.setPadding(new Insets(4,0,0,0));
+        suggestionBar.setPadding(new Insets(4, 0, 0, 0));
 
         VBox center = new VBox(8, input, new Label("Suggestions:"), suggestionBar);
         center.setPadding(new Insets(10));
         root.setCenter(center);
 
+        // Debounced suggestion updates while typing
         input.textProperty().addListener((obs, oldV, newV) -> {
             debounce.stop();
             debounce.setOnFinished(ev -> updateSuggestions(newV));
@@ -61,14 +86,30 @@ public class ComposeView {
         });
     }
 
+    /**
+     Generates a sentence using the currently selected algorithm.
+     * TODO (backend team):
+       - Switch on algorithmSelector.getValue() and call the appropriate
+     */
     private void doGenerate() {
+        String selectedAlgo = algorithmSelector.getValue();
+        // For now, we ignore selectedAlgo and always use the same generator.
+        // Later, use selectedAlgo to choose a specific model.
         String out = generator.generate(input.getText(), 12);
         input.setText(out);
         input.positionCaret(out.length());
         updateSuggestions(out);
     }
 
+    /**
+     Updates suggestion chips based on current text and selected algorithm.
+     
+     TODO (backend team):
+       - Use algorithmSelector.getValue() to select a model for suggestions when multiple models are available.
+     */
     private void updateSuggestions(String text) {
+        String selectedAlgo = algorithmSelector.getValue();
+        // For now, selectedAlgo is not used.
         List<String> list = suggestions.suggestNext(text, 5);
         suggestionBar.getChildren().clear();
         for (String s : list) {
@@ -87,5 +128,7 @@ public class ComposeView {
         updateSuggestions(input.getText());
     }
 
-    public Parent getNode() { return root; }
+    public Parent getNode() {
+        return root;
+    }
 }
