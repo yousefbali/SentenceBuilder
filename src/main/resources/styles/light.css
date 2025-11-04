@@ -1,0 +1,28 @@
+.root {
+    -fx-background-color: #f7f7fb;
+    -fx-font-size: 14px;
+}
+.tab-pane .tab-header-area {
+    -fx-background-color: transparent;
+}
+.hbox, .vbox {
+    -fx-spacing: 8px;
+}
+.button {
+    -fx-padding: 8 12 8 12;
+    -fx-background-radius: 10;
+}
+.text-area {
+    -fx-padding: 8;
+}
+.status-bar {
+    -fx-background-color: #ffffff;
+    -fx-padding: 6 10 6 10;
+    -fx-border-color: #e2e2ea;
+    -fx-border-width: 1 0 0 0;
+}
+.suggestion-chip {
+    -fx-background-color: #e9ecff;
+    -fx-background-radius: 12;
+    -fx-padding: 4 10 4 10;
+}

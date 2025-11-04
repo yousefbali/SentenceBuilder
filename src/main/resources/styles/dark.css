@@ -1,0 +1,35 @@
+.root {
+    -fx-background-color: #0f1115;
+    -fx-font-size: 14px;
+    -fx-text-fill: #eaeaea;
+}
+.label, .button, .text-area, .tab {
+    -fx-text-fill: #eaeaea;
+}
+.tab-pane .tab-header-area {
+    -fx-background-color: #0f1115;
+}
+.hbox, .vbox {
+    -fx-spacing: 8px;
+}
+.button {
+    -fx-padding: 8 12 8 12;
+    -fx-background-radius: 10;
+    -fx-background-color: #1a1f2b;
+}
+.text-area {
+    -fx-control-inner-background: #111522;
+    -fx-text-fill: #eaeaea;
+    -fx-padding: 8;
+}
+.status-bar {
+    -fx-background-color: #0b0e15;
+    -fx-padding: 6 10 6 10;
+    -fx-border-color: #2a2f3a;
+    -fx-border-width: 1 0 0 0;
+}
+.suggestion-chip {
+    -fx-background-color: #273048;
+    -fx-background-radius: 12;
+    -fx-padding: 4 10 4 10;
+}
