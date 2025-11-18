@@ -21,5 +21,6 @@ what you setup when installing MySQL/MariaDB
 
 
 6. run the command to start app
+```
 gradlew run
-
+```
