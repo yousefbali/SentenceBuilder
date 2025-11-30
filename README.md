@@ -6,21 +6,16 @@ pre-reqs
 steps to run
 1. clone the repo
 
-2. in the root folder of the repo, run the following command to create the database
-```
-mysql -u root -p < src/main/resources/schema.sql
-```
-you can also at any time rerun this command to clear all data
-
-4. setup your db.properties file with your user and password
-```
-src/main/resources/db.properties
-```
-i put an example as well but basically just change your user and password to match
-what you setup when installing MySQL/MariaDB
-
-
-6. run the command to start app
+2. cd into project root and run the following command to start
 ```
 gradlew run
 ```
+3. install wizard will open, enter your mysql/mariadb password to create isolated db and user
+
+4. import wtv files you want, default path opening location is /sentencebuilder/input so maybe put them there to be easier idk
+
+5. test the rest of the program
+
+6. reset db is in dbviewer tab. uninstall wizard is located in analytics tab
+
+things to do: add ppls names to files in code
