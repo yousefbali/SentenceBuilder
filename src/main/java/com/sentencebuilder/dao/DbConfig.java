@@ -5,7 +5,7 @@
  * configuration file used by Sentence Builder.
  *
  * The configuration file lives at:
- *   {user.home}/.sentencebuilder/db.properties
+ *   db.properties in the application working directory
  *
  * This stores values such as:
  *   - host=localhost:3306
@@ -30,30 +30,31 @@ import java.nio.file.Paths;
 import java.util.Properties;
 
 /**
- * Simple helper for working with ~/.sentencebuilder/db.properties.
+ * Simple helper for working with db.properties in the application
+ * working directory.
  */
 public final class DbConfig {
 
-    // Example path (Windows):
-    //   C:\Users\<username>\.sentencebuilder\db.properties
-    private static final Path CONFIG_DIR =
-            Paths.get(System.getProperty("user.home"), ".sentencebuilder");
+    // Config file path, for example:
+    //   <project-root>/db.properties
+    // or, when running a JAR:
+    //   <folder-where-you-run-the-JAR>/db.properties
     private static final Path CONFIG_FILE =
-            CONFIG_DIR.resolve("db.properties");
+            Paths.get("db.properties");
 
     private DbConfig() {
         // utility class; no instances
     }
 
     /**
-     * @return true if ~/.sentencebuilder/db.properties currently exists.
+     * @return true if ./db.properties currently exists.
      */
     public static boolean configExists() {
         return Files.exists(CONFIG_FILE);
     }
 
     /**
-     * Load configuration from ~/.sentencebuilder/db.properties into a Properties object.
+     * Load configuration from ./db.properties into a Properties object.
      *
      * @return Properties loaded from the config file.
      * @throws IOException if the file cannot be read.
@@ -67,16 +68,18 @@ public final class DbConfig {
     }
 
     /**
-     * Save configuration to ~/.sentencebuilder/db.properties.
-     * Creates the directory if needed.
+     * Save configuration to ./db.properties.
+     * Creates the parent directory if needed (in case a relative subdirectory
+     * is used).
      *
      * @param props properties to write (host, database, user, password, etc.).
      * @throws IOException if writing fails.
      */
     public static void saveConfig(Properties props) throws IOException {
-        // Ensure parent directory exists before writing.
-        if (!Files.exists(CONFIG_DIR)) {
-            Files.createDirectories(CONFIG_DIR);
+        // Ensure parent directory exists before writing (usually null for plain "db.properties").
+        Path parent = CONFIG_FILE.getParent();
+        if (parent != null && !Files.exists(parent)) {
+            Files.createDirectories(parent);
         }
         try (OutputStream out = new FileOutputStream(CONFIG_FILE.toFile())) {
             // store(...) writes Java-style properties with an optional comment header.
@@ -85,7 +88,7 @@ public final class DbConfig {
     }
 
     /**
-     * Delete the ~/.sentencebuilder/db.properties file if it exists.
+     * Delete the ./db.properties file if it exists.
      *
      * @throws IOException if deletion fails in an unexpected way.
      */
@@ -96,7 +99,7 @@ public final class DbConfig {
     /**
      * Expose the resolved path for tooling, debugging, or UI messages.
      *
-     * @return Path to ~/.sentencebuilder/db.properties.
+     * @return Path to ./db.properties.
      */
     public static Path getConfigFilePath() {
         return CONFIG_FILE;

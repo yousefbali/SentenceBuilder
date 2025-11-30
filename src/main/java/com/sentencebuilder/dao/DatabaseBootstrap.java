@@ -97,7 +97,7 @@ public class DatabaseBootstrap {
             props.setProperty("user", appUser);
             props.setProperty("password", appPass);
 
-            // Persist to ~/.sentencebuilder/db.properties.
+            // Persist to db.properties in the working directory.
             DbConfig.saveConfig(props);
 
             // Also push this config into memory so this run can use it immediately.

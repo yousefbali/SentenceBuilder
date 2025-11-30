@@ -22,7 +22,6 @@
 package com.sentencebuilder.dao;
 
 import java.io.IOException;
-import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -38,8 +37,7 @@ public final class Database {
      *
      * The precedence for where these come from is implemented in loadConfig():
      *   1) Programmatic configuration via configure(...).
-     *   2) External db.properties in ~/.sentencebuilder.
-     *   3) Classpath /db.properties (development fallback).
+     *   2) db.properties in the application working directory.
      */
     private static Properties cachedProps;
 
@@ -59,7 +57,7 @@ public final class Database {
 
     /**
      * Clear cached configuration (used after reset).
-     * Next call to loadConfig() will re-read from disk or classpath.
+     * Next call to loadConfig() will re-read from disk.
      */
     public static void clearCachedConfig() {
         cachedProps = null;
@@ -126,11 +124,10 @@ public final class Database {
     /**
      * Load configuration from (in order of precedence):
      *   1) cached in-memory props (if already set via configure()),
-     *   2) ~/.sentencebuilder/db.properties (user-specific config),
-     *   3) classpath /db.properties (fallback for development).
+     *   2) db.properties in the working directory.
      *
      * This method throws a RuntimeException with a clear message if it
-     * cannot find any configuration source.
+     * cannot find a configuration source.
      */
     private static Properties loadConfig() {
         // 1) Use cached settings if we have them.
@@ -141,20 +138,13 @@ public final class Database {
         try {
             Properties props;
 
-            // 2) Check for external config file in the user's home directory.
+            // 2) Check for config file in the working directory.
             if (DbConfig.configExists()) {
-                // external config in user's home directory
                 props = DbConfig.loadConfig();
             } else {
-                // 3) Fallback to classpath db.properties (useful for development).
-                try (InputStream in = Database.class.getResourceAsStream("/db.properties")) {
-                    if (in == null) {
-                        throw new IOException(
-                                "db.properties not found on classpath and no external config present.");
-                    }
-                    props = new Properties();
-                    props.load(in);
-                }
+                // No db.properties has been created yet; the setup wizard
+                // is expected to create this file before normal use.
+                throw new IOException("db.properties not found in working directory.");
             }
 
             // Cache for future calls to avoid re-reading from disk.
@@ -165,7 +155,8 @@ public final class Database {
             // don't have to handle IOException everywhere.
             throw new RuntimeException(
                     "Failed to load DB configuration. " +
-                    "Ensure db.properties exists either in ~/.sentencebuilder or on the classpath.",
+                    "Ensure db.properties exists in the application working directory " +
+                    "(for example, the project root or the same folder as the JAR).",
                     e
             );
         }
