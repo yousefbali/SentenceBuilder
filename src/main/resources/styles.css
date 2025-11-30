@@ -1,0 +1,307 @@
+/* ---------- Global ---------- */
+
+.root {
+    -fx-font-family: "Segoe UI", "Inter", "SF Pro", system-ui, sans-serif;
+    -fx-font-size: 14px;
+    -fx-background-color: #f3f4f6; /* app background */
+}
+
+/* Utility containers */
+.page-root {
+    -fx-padding: 24;
+}
+
+.page-card {
+    -fx-background-color: white;
+    -fx-background-radius: 14;
+    -fx-padding: 20;
+    -fx-spacing: 16;
+    -fx-effect: dropshadow(gaussian, rgba(15, 23, 42, 0.08), 12, 0.15, 0, 4);
+}
+
+.page-card-wide {
+    -fx-max-width: 1040;
+}
+
+/* ---------- Tabs ---------- */
+
+.tab-pane {
+    -fx-background-color: transparent;
+}
+
+.tab-pane .tab-header-area {
+    -fx-background-color: #e5e7eb;
+    -fx-padding: 6 12 0 12;
+    -fx-border-color: #d1d5db;
+    -fx-border-width: 0 0 1 0;
+}
+
+.tab-pane .tab-header-area .tab-header-background {
+    -fx-background-color: transparent;
+    -fx-border-width: 0;
+}
+
+/* individual tabs */
+.tab-pane .tab {
+    -fx-background-insets: 0;
+    -fx-background-radius: 10 10 0 0;
+    -fx-padding: 6 14 6 14;
+    -fx-background-color: transparent;
+}
+
+.tab-pane .tab-label {
+    -fx-font-weight: 600;
+    -fx-text-fill: #4b5563;
+}
+
+/* selected tab */
+.tab-pane .tab:selected {
+    -fx-background-color: white;
+    -fx-border-color: #6366f1 #6366f1 white #6366f1;
+    -fx-border-width: 1 1 0 1;
+    -fx-border-radius: 10 10 0 0;
+}
+
+.tab-pane .tab:selected .tab-label {
+    -fx-text-fill: #111827;
+}
+
+/* ---------- Typography ---------- */
+
+.page-title {
+    -fx-font-size: 18px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #111827;
+}
+
+.page-subtitle {
+    -fx-text-fill: #6b7280;
+}
+
+.section-title {
+    -fx-font-size: 13px;
+    -fx-font-weight: 600;
+    -fx-text-fill: #6b7280;
+    -fx-text-transform: uppercase;
+}
+
+.mono-label {
+    -fx-font-family: "JetBrains Mono", "Consolas", monospace;
+}
+
+/* ---------- Buttons ---------- */
+
+.button {
+    -fx-background-radius: 999;
+    -fx-padding: 6 14;
+    -fx-font-weight: 600;
+    -fx-background-insets: 0;
+    -fx-cursor: hand;
+}
+
+/* primary action (indigo) */
+.button-primary {
+    -fx-background-color: linear-gradient(to bottom right, #6366f1, #4f46e5);
+    -fx-text-fill: white;
+}
+
+.button-primary:hover {
+    -fx-background-color: linear-gradient(to bottom right, #4f46e5, #4338ca);
+}
+
+.button-primary:pressed {
+    -fx-background-color: #4338ca;
+}
+
+/* subtle secondary button */
+.button-secondary {
+    -fx-background-color: #e5e7eb;
+    -fx-text-fill: #111827;
+}
+
+.button-secondary:hover {
+    -fx-background-color: #d1d5db;
+}
+
+/* danger button */
+.button-danger {
+    -fx-background-color: #fee2e2;
+    -fx-text-fill: #b91c1c;
+}
+
+.button-danger:hover {
+    -fx-background-color: #fecaca;
+}
+
+/* disabled state */
+.button:disabled {
+    -fx-opacity: 0.5;
+    -fx-cursor: default;
+}
+
+/* ---------- Text input controls ---------- */
+
+.text-field,
+.text-area,
+.combo-box,
+.spinner {
+    -fx-background-radius: 8;
+    -fx-background-color: white;
+    -fx-border-color: #d1d5db;
+    -fx-border-radius: 8;
+    -fx-padding: 5 8;
+}
+
+.text-area {
+    -fx-padding: 8;
+}
+
+.text-field:focused,
+.text-area:focused,
+.combo-box:focused,
+.spinner:focused {
+    -fx-border-color: #6366f1;
+    -fx-effect: dropshadow(gaussian, rgba(99, 102, 241, 0.25), 8, 0.2, 0, 0);
+}
+
+/* ---------- Labels ---------- */
+
+.status-label {
+    -fx-text-fill: #4b5563;
+}
+
+.status-label-muted {
+    -fx-text-fill: #9ca3af;
+}
+
+/* ---------- Tables & Lists ---------- */
+
+.table-view {
+    -fx-background-color: white;
+    -fx-background-radius: 10;
+    -fx-border-color: #e5e7eb;
+    -fx-border-radius: 10;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #f9fafb;
+    -fx-border-color: #e5e7eb;
+    -fx-background-radius: 10 10 0 0;
+}
+
+.table-view .column-header,
+.table-view .filler {
+    -fx-size: 30;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: #6b7280;
+    -fx-font-weight: 600;
+}
+
+.table-row-cell:filled:selected {
+    -fx-background-color: #e0e7ff;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #f9fafb;
+}
+
+.list-view {
+    -fx-background-color: white;
+    -fx-border-color: #e5e7eb;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+}
+
+/* ---------- ProgressBar ---------- */
+
+.progress-bar {
+    -fx-background-radius: 999;
+}
+
+.progress-bar > .track {
+    -fx-background-color: #e5e7eb;
+    -fx-background-radius: 999;
+}
+
+.progress-bar > .bar {
+    -fx-background-radius: 999;
+    -fx-background-color: linear-gradient(to right, #6366f1, #4f46e5);
+}
+
+/* ---------- Analytics chips ---------- */
+
+.stat-chip {
+    -fx-background-radius: 999;
+    -fx-padding: 4 10;
+    -fx-font-size: 12px;
+    -fx-font-weight: 600;
+}
+
+.stat-chip-indigo {
+    -fx-background-color: #eef2ff;
+    -fx-text-fill: #3730a3;
+}
+
+.stat-chip-emerald {
+    -fx-background-color: #ecfdf5;
+    -fx-text-fill: #047857;
+}
+
+.stat-chip-amber {
+    -fx-background-color: #fffbeb;
+    -fx-text-fill: #92400e;
+}
+
+/* ---------- Misc layout helpers ---------- */
+
+.toolbar-row {
+    -fx-spacing: 8;
+    -fx-alignment: CENTER_LEFT;
+}
+
+.spacer {
+    -fx-min-width: 10;
+}
+
+
+/* ---------- Pill toggle buttons for DB tables ---------- */
+
+.toggle-pill {
+    -fx-background-color: #e5e7eb;
+    -fx-text-fill: #111827;
+    -fx-background-radius: 999;
+    -fx-padding: 4 10;
+    -fx-font-size: 12px;
+    -fx-font-weight: 600;
+    -fx-background-insets: 0;
+    -fx-cursor: hand;
+}
+
+.toggle-pill:hover {
+    -fx-background-color: #d1d5db;
+}
+
+.toggle-pill:selected {
+    -fx-background-color: #6366f1;
+    -fx-text-fill: white;
+}
+
+.toggle-pill:disabled {
+    -fx-opacity: 0.5;
+    -fx-cursor: default;
+}
+
+/* ---------- Import summary block ---------- */
+
+.summary-body {
+    -fx-background-color: #f9fafb;
+    -fx-border-color: #e5e7eb;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-padding: 10 12;
+    -fx-font-size: 13px;
+    -fx-text-fill: #374151;
+    -fx-font-family: "JetBrains Mono", "Consolas", monospace;
+}
