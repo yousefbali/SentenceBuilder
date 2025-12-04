@@ -33,6 +33,9 @@ import java.util.Properties;
  * Simple helper for working with db.properties in the application
  * working directory.
  */
+/*
+Written by <Mehdi Devjani> (<mmd210006>) and <Yousuf Ismail> (<YXI220002>) for <CS4485.0W1>, 
+*/
 public final class DbConfig {
 
     // Config file path, for example:
@@ -105,3 +108,4 @@ public final class DbConfig {
         return CONFIG_FILE;
     }
 }
+
