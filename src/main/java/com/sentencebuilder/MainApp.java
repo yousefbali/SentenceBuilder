@@ -11,8 +11,8 @@
  *   - Wire the Import tab so that, after a successful import, the Analytics
  *     and Database Viewer tabs automatically refresh their views.
  *
- * Written by <Your Name> (<Your NetID>) for <Course/Section>, Assignment <N>,
- * starting <Month Day, 2025>.
+ * Written by Yousef Ali  for CS 4485.0W1,
+ * starting October 17, 2025.
  ******************************************************************************/
 
 package com.sentencebuilder;
@@ -154,3 +154,4 @@ public class MainApp extends Application {
         launch(args);
     }
 }
+
