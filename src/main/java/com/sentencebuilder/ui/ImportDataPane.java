@@ -11,8 +11,8 @@
  * An optional callback can be supplied to notify other panes (analytics,
  * database viewer, etc.) when new data has been imported.
  *
- * Written by <Your Name> (<Your NetID>) for <Course/Section>, Assignment <N>,
- * starting <Month Day, 2025>.
+ * Written by Yousef Ali  for CS 4485.0W1,
+ * starting October 23, 2025.
  ******************************************************************************/
 
 package com.sentencebuilder.ui;
@@ -397,3 +397,4 @@ public class ImportDataPane extends BorderPane {
         worker.start();
     }
 }
+
