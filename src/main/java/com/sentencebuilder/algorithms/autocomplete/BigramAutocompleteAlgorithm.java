@@ -63,7 +63,9 @@ public class BigramAutocompleteAlgorithm implements AutocompleteAlgorithm {
 
         // Normalize to the canonical form used in the DB.
         String normalized = lastWord.trim().toLowerCase(Locale.ROOT);
-
+/*
+Written by <Mehdi Devjani> (<mmd210006>) and <Yousuf Ismail> (<YXI220002>) for <CS4485.0W1>, 
+*/
         String sql =
                 "SELECT w2.word_text " +
                 "FROM words w1 " +
@@ -89,3 +91,4 @@ public class BigramAutocompleteAlgorithm implements AutocompleteAlgorithm {
         }
     }
 }
+
