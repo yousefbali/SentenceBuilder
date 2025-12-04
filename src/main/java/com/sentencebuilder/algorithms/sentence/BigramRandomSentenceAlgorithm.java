@@ -71,7 +71,9 @@ public class BigramRandomSentenceAlgorithm implements SentenceAlgorithm {
         // We already have one word; extend up to maxWords by sampling bigrams.
         for (int wordIndex = 1; wordIndex < maxWords; wordIndex++) {
             List<Candidate> candidates = new ArrayList<>();
-
+/*
+Written by <Mehdi Devjani> (<mmd210006>) and <Yousuf Ismail> (<YXI220002>) for <CS4485.0W1>, 
+*/
             // Look up the most frequent words that follow the current token.
             try (PreparedStatement ps = c.prepareStatement(
                     "SELECT w2.word_text, r.frequency " +
@@ -143,3 +145,4 @@ public class BigramRandomSentenceAlgorithm implements SentenceAlgorithm {
         }
     }
 }
+
