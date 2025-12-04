@@ -1,6 +1,13 @@
+
+/*
+Written by <Mehdi Devjani> (<mmd210006>) and <Yousuf Ismail> (<YXI220002>) for <CS4485.0W1>, 
+*/
 CREATE DATABASE file_management;
 USE file_management;
 
+/*
+Written by <Mehdi Devjani> (<mmd210006>) and <Yousuf Ismail> (<YXI220002>) for <CS4485.0W1>, 
+*/
 CREATE TABLE files (
     file_id INT AUTO_INCREMENT PRIMARY KEY,
     filename VARCHAR(255) NOT NULL UNIQUE,
@@ -8,6 +15,9 @@ CREATE TABLE files (
     import_date DATETIME DEFAULT CURRENT_TIMESTAMP
 );
 
+/*
+Written by <Mehdi Devjani> (<mmd210006>) and <Yousuf Ismail> (<YXI220002>) for <CS4485.0W1>, 
+*/
 CREATE TABLE words (
     word_id INT AUTO_INCREMENT PRIMARY KEY,
     word_text VARCHAR(100) NOT NULL UNIQUE,
@@ -18,6 +28,9 @@ CREATE TABLE words (
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP
 );
 
+/*
+Written by <Mehdi Devjani> (<mmd210006>) and <Yousuf Ismail> (<YXI220002>) for <CS4485.0W1>, 
+*/
 CREATE TABLE word_relations_bigram (
     from_word_id INT NOT NULL,
     to_word_id INT NOT NULL,
@@ -27,6 +40,9 @@ CREATE TABLE word_relations_bigram (
     FOREIGN KEY (to_word_id) REFERENCES words(word_id) ON DELETE CASCADE
 );
 
+/*
+Written by <Mehdi Devjani> (<mmd210006>) and <Yousuf Ismail> (<YXI220002>) for <CS4485.0W1>, 
+*/
 CREATE TABLE word_relations_trigram (
     first_word_id INT NOT NULL,
     second_word_id INT NOT NULL,
@@ -38,6 +54,9 @@ CREATE TABLE word_relations_trigram (
     FOREIGN KEY (next_word_id) REFERENCES words(word_id) ON DELETE CASCADE
 );
 
+/*
+Written by <Mehdi Devjani> (<mmd210006>) and <Yousuf Ismail> (<YXI220002>) for <CS4485.0W1>, 
+*/
 CREATE TABLE word_files (
     word_id INT NOT NULL,
     file_id INT NOT NULL,
@@ -47,8 +66,12 @@ CREATE TABLE word_files (
     FOREIGN KEY (file_id) REFERENCES files(file_id) ON DELETE CASCADE
 );
 
+/*
+Written by <Mehdi Devjani> (<mmd210006>) and <Yousuf Ismail> (<YXI220002>) for <CS4485.0W1>, 
+*/
 CREATE TABLE metadata (
     meta_key VARCHAR(100) PRIMARY KEY,
     meta_value VARCHAR(255)
 );
+
 
