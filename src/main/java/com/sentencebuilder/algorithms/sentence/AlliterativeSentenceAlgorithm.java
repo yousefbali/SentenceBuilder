@@ -78,7 +78,9 @@ public class AlliterativeSentenceAlgorithm implements SentenceAlgorithm {
         // Collect candidate words that start with the same first letter, ordered
         // by total frequency so more common words appear more often in the pool.
         List<String> candidates = new ArrayList<>();
-
+/*
+Written by <Mehdi Devjani> (<mmd210006>) and <Yousuf Ismail> (<YXI220002>) for <CS4485.0W1>, 
+*/
         try (PreparedStatement ps = c.prepareStatement(
                 "SELECT word_text " +
                 "FROM words " +
@@ -116,3 +118,4 @@ public class AlliterativeSentenceAlgorithm implements SentenceAlgorithm {
         return sb.toString();
     }
 }
+
