@@ -9,8 +9,8 @@
  *     relation tables (bigrams/trigrams/word_files).
  *   - Clearing all application data from the database.
  *
- * Written by <Your Name> (<Your NetID>) for <Course/Section>, Assignment <N>,
- * starting <Month Day, 2025>.
+ * Written by Yousef Ali  for CS 4485.0W1,
+ * starting October 23, 2025.
  ******************************************************************************/
 
 package com.sentencebuilder.ui;
@@ -510,3 +510,4 @@ public class DatabaseViewerPane extends BorderPane implements DataRefreshable {
         refresh();
     }
 }
+
