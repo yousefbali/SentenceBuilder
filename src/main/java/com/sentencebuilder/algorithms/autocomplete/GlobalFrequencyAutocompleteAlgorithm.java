@@ -55,7 +55,9 @@ public class GlobalFrequencyAutocompleteAlgorithm implements AutocompleteAlgorit
         if (limit <= 0) {
             return List.of();
         }
-
+/*
+Written by <Mehdi Devjani> (<mmd210006>) and <Yousuf Ismail> (<YXI220002>) for <CS4485.0W1>, 
+*/
         String sql =
                 "SELECT word_text " +
                 "FROM words " +
@@ -75,3 +77,4 @@ public class GlobalFrequencyAutocompleteAlgorithm implements AutocompleteAlgorit
         }
     }
 }
+
