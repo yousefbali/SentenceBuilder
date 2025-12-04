@@ -89,6 +89,9 @@ public class BigramGreedySentenceAlgorithm implements SentenceAlgorithm {
      * We prefer words that frequently start sentences, falling back on
      * total_count if there is a tie.
      */
+/*
+Written by <Mehdi Devjani> (<mmd210006>) and <Yousuf Ismail> (<YXI220002>) for <CS4485.0W1>, 
+*/
     private String pickBestStartingWord(Connection c) throws Exception {
         String sql =
                 "SELECT word_text " +
@@ -119,7 +122,9 @@ public class BigramGreedySentenceAlgorithm implements SentenceAlgorithm {
         }
 
         String normalized = currentWord.toLowerCase(Locale.ROOT);
-
+/*
+Written by <Mehdi Devjani> (<mmd210006>) and <Yousuf Ismail> (<YXI220002>) for <CS4485.0W1>, 
+*/
         String sql =
                 "SELECT w2.word_text " +
                 "FROM words w1 " +
@@ -141,3 +146,4 @@ public class BigramGreedySentenceAlgorithm implements SentenceAlgorithm {
         return null;
     }
 }
+
