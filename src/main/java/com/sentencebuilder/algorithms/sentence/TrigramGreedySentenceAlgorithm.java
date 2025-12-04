@@ -107,6 +107,9 @@ public class TrigramGreedySentenceAlgorithm implements SentenceAlgorithm {
      * Pick a good starting word based on sentence_start_count, then total_count.
      * (Same logic as in BigramGreedySentenceAlgorithm.)
      */
+/*
+Written by <Mehdi Devjani> (<mmd210006>) and <Yousuf Ismail> (<YXI220002>) for <CS4485.0W1>, 
+*/
     private String pickBestStartingWord(Connection c) throws Exception {
         String sql =
                 "SELECT word_text " +
@@ -133,7 +136,9 @@ public class TrigramGreedySentenceAlgorithm implements SentenceAlgorithm {
         }
 
         String normalized = currentWord.toLowerCase(Locale.ROOT);
-
+/*
+Written by <Mehdi Devjani> (<mmd210006>) and <Yousuf Ismail> (<YXI220002>) for <CS4485.0W1>, 
+*/
         String sql =
                 "SELECT w2.word_text " +
                 "FROM words w1 " +
@@ -172,7 +177,9 @@ public class TrigramGreedySentenceAlgorithm implements SentenceAlgorithm {
 
         String w1 = firstWord.toLowerCase(Locale.ROOT);
         String w2 = secondWord.toLowerCase(Locale.ROOT);
-
+/*
+Written by <Mehdi Devjani> (<mmd210006>) and <Yousuf Ismail> (<YXI220002>) for <CS4485.0W1>, 
+*/
         String sql =
                 "SELECT w3.word_text " +
                 "FROM words w1 " +
@@ -196,3 +203,4 @@ public class TrigramGreedySentenceAlgorithm implements SentenceAlgorithm {
         return null;
     }
 }
+
