@@ -11,8 +11,8 @@
  * It depends on the database schema used by Sentence Builder and reloads its
  * data via the DataRefreshable interface after imports or resets.
  *
- * Written by <Your Name> (<Your NetID>) for <Course/Section>, Assignment <N>,
- * starting <Month Day, 2025>.
+ * Written by Yousef Ali (yba210001) for CS 4485.0W1,
+ * starting October 23, 2025.
  ******************************************************************************/
 
 package com.sentencebuilder.ui;
@@ -282,3 +282,4 @@ public class AnalyticsPane extends BorderPane implements DataRefreshable {
         public int endCount()   { return endCount; }
     }
 }
+
