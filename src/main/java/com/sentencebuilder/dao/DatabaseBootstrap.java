@@ -37,6 +37,9 @@ import java.util.stream.Collectors;
 /**
  * Static utility for bootstrapping and resetting the application database.
  */
+/*
+Written by <Mehdi Devjani> (<mmd210006>) and <Yousuf Ismail> (<YXI220002>) for <CS4485.0W1>, 
+*/
 public class DatabaseBootstrap {
 
     private DatabaseBootstrap() {
@@ -182,3 +185,4 @@ public class DatabaseBootstrap {
         Database.clearCachedConfig();
     }
 }
+
