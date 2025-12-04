@@ -8,8 +8,8 @@
  *   - AnalyticsPane: reload summary stats and top words.
  *   - DatabaseViewerPane: reset paging and reload current table.
  *
- * Written by <Your Name> (<Your NetID>) for <Course/Section>, Assignment <N>,
- * starting <Month Day, 2025>.
+ * Written by Yousef Ali  for CS 4485.0W1,
+ * starting <November 12, 2025.
  ******************************************************************************/
 
 package com.sentencebuilder.ui;
@@ -27,3 +27,4 @@ public interface DataRefreshable {
      */
     void refreshData();
 }
+
