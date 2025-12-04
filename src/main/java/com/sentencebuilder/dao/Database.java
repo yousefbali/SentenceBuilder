@@ -30,6 +30,10 @@ import java.util.Properties;
 /**
  * Static utility for DB access; not intended to be instantiated.
  */
+
+/*
+Written by <Mehdi Devjani> (<mmd210006>) and <Yousuf Ismail> (<YXI220002>) for <CS4485.0W1>, 
+*/
 public final class Database {
 
     /**
@@ -162,3 +166,4 @@ public final class Database {
         }
     }
 }
+
