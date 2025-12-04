@@ -11,8 +11,8 @@
  * The wizard reports success/failure through the isSuccess() flag so that
  * callers can decide whether to continue launching the main UI.
  *
- * Written by <Your Name> (<Your NetID>) for <Course/Section>, Assignment <N>,
- * starting <Month Day, 2025>.
+ * Written by Yousef Ali  for CS 4485.0W1,
+ * starting October 26, 2025.
  ******************************************************************************/
 
 package com.sentencebuilder.ui;
@@ -144,3 +144,4 @@ public class SetupWizard extends Stage {
         alert.showAndWait();
     }
 }
+
