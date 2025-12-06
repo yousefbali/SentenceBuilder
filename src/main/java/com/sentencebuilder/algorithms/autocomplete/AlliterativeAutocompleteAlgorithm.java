@@ -12,8 +12,8 @@
  *   3. Returns the most frequent words in the corpus whose text starts with
  *      that same letter, excluding the seed word itself.
  *
- * Written by <Your Name> (<Your NetID>) for CS 4485, Sentence Builder project,
- * starting <Month Day, 2025>.
+ * Written by Yoel Kidane (yxk220039) for CS 4485, Sentence Builder project,
+ * starting November 11, 2025.
  ******************************************************************************/
 
 package com.sentencebuilder.algorithms.autocomplete;
@@ -71,9 +71,7 @@ public class AlliterativeAutocompleteAlgorithm implements AutocompleteAlgorithm 
         if (!Character.isLetter(first)) {
             return List.of();
         }
-/*
-Written by <Mehdi Devjani> (<mmd210006>) and <Yousuf Ismail> (<YXI220002>) for <CS4485.0W1>, 
-*/
+
         String sql =
                 "SELECT word_text " +
                 "FROM words " +

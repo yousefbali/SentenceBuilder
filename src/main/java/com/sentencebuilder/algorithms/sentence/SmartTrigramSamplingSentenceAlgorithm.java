@@ -16,8 +16,8 @@
  * appear at the end of sentences in the training corpus, using the per-word
  * sentence_end_count and total_count statistics.
  *
- * Written by <Your Name> (<Your NetID>) for CS 4485, Sentence Builder project,
- * starting <Month Day, 2025>.
+ * Written by Ali Saidane (axs220579) for CS 4485, Sentence Builder project,
+ * starting November 11, 2025.
  ******************************************************************************/
 package com.sentencebuilder.algorithms.sentence;
 
@@ -174,9 +174,7 @@ public class SmartTrigramSamplingSentenceAlgorithm implements SentenceAlgorithm 
      */
     private Candidate sampleFromTrigrams(Connection c, String prev2, String prev1) throws Exception {
         List<Candidate> candidates = new ArrayList<>();
-/*
-Written by <Mehdi Devjani> (<mmd210006>) and <Yousuf Ismail> (<YXI220002>) for <CS4485.0W1>, 
-*/
+
         String sql = """
             SELECT w3.word_text, t.frequency, w3.sentence_end_count, w3.total_count
             FROM words w1
@@ -220,9 +218,7 @@ Written by <Mehdi Devjani> (<mmd210006>) and <Yousuf Ismail> (<YXI220002>) for <
      */
     private Candidate sampleFromBigrams(Connection c, String prev) throws Exception {
         List<Candidate> candidates = new ArrayList<>();
-/*
-Written by <Mehdi Devjani> (<mmd210006>) and <Yousuf Ismail> (<YXI220002>) for <CS4485.0W1>, 
-*/
+
         String sql = """
             SELECT w2.word_text, r.frequency, w2.sentence_end_count, w2.total_count
             FROM words w1

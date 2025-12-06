@@ -11,8 +11,8 @@
  * Suggestions are ranked purely by n-gram frequency (no sampling), so the
  * result is deterministic for a given context.
  *
- * Written by <Your Name> (<Your NetID>) for CS 4485, Sentence Builder project,
- * starting <Month Day, 2025>.
+ * Written by Yoel Kidane (yxk220039) for CS 4485, Sentence Builder project,
+ * starting October 18, 2025.
  ******************************************************************************/
 
 package com.sentencebuilder.algorithms.autocomplete;
@@ -122,9 +122,7 @@ public class ContextTrigramAutocompleteAlgorithm implements AutocompleteAlgorith
      */
     private List<String> suggestFromTrigrams(Connection c, String prev2, String prev1, int limit)
             throws Exception {
-/*
-Written by <Mehdi Devjani> (<mmd210006>) and <Yousuf Ismail> (<YXI220002>) for <CS4485.0W1>, 
-*/
+
         String sql = """
             SELECT w3.word_text
             FROM words w1
@@ -165,9 +163,7 @@ Written by <Mehdi Devjani> (<mmd210006>) and <Yousuf Ismail> (<YXI220002>) for <
      *
      * @throws Exception If a database error occurs.
      */
-/*
-Written by <Mehdi Devjani> (<mmd210006>) and <Yousuf Ismail> (<YXI220002>) for <CS4485.0W1>, 
-*/
+
     private List<String> suggestFromBigrams(Connection c, String prev, int limit) throws Exception {
         String sql = """
             SELECT w2.word_text

@@ -8,7 +8,7 @@
  * After a successful reset, the application will close so the user
  * can restart with a clean setup.
  *
- * Written by Yousef Ali  for CS 4485.0W1,
+ * Written by Mehdi Devjani (mmd210006) for CS 4485, Sentence Builder project,
  * starting November 7, 2025.
  ******************************************************************************/
 

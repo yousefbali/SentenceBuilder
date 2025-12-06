@@ -11,7 +11,7 @@
  *   - Wire the Import tab so that, after a successful import, the Analytics
  *     and Database Viewer tabs automatically refresh their views.
  *
- * Written by Yousef Ali  for CS 4485.0W1,
+ * Written by Yousuf Ismail (yxi220002) for CS 4485.0W1,
  * starting October 17, 2025.
  ******************************************************************************/
 

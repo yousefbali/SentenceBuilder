@@ -11,8 +11,8 @@
  * word directly; instead, it always returns the top-N words ordered by
  * total_count in the words table.
  *
- * Written by <Your Name> (<Your NetID>) for CS 4485, Sentence Builder project,
- * starting <Month Day, 2025>.
+ * Written by Ali Saidane (axs220579) for CS 4485, Sentence Builder project,
+ * starting October 24, 2025.
  ******************************************************************************/
 
 package com.sentencebuilder.algorithms.autocomplete;
@@ -55,9 +55,7 @@ public class GlobalFrequencyAutocompleteAlgorithm implements AutocompleteAlgorit
         if (limit <= 0) {
             return List.of();
         }
-/*
-Written by <Mehdi Devjani> (<mmd210006>) and <Yousuf Ismail> (<YXI220002>) for <CS4485.0W1>, 
-*/
+
         String sql =
                 "SELECT word_text " +
                 "FROM words " +

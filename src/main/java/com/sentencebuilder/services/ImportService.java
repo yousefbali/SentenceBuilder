@@ -17,8 +17,8 @@
  *     the entire file is imported or nothing is.
  *   - Return an ImportSummary so the UI can show quick feedback.
  *
- * Written by <Your Name> (<Your NetID>) for <Course/Section>, Assignment <N>,
- * starting <Month Day, 2025>.
+ * Written by Yonas Neguse (yxn220013) for <Course/Section>, Assignment <N>,
+ * starting October 18, 2025>.
  ******************************************************************************/
 
 package com.sentencebuilder.services;

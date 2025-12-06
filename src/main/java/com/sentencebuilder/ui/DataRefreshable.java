@@ -8,7 +8,7 @@
  *   - AnalyticsPane: reload summary stats and top words.
  *   - DatabaseViewerPane: reset paging and reload current table.
  *
- * Written by Yousef Ali  for CS 4485.0W1,
+ * Written by Yousuf Ismail (yxi220002) for CS 4485.0W1,
  * starting <November 12, 2025.
  ******************************************************************************/
 

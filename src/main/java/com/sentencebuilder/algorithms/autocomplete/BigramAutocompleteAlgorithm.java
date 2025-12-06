@@ -10,8 +10,8 @@
  *
  * This behaves like a simple "next word predictor" driven purely by bigrams.
  *
- * Written by <Your Name> (<Your NetID>) for CS 4485, Sentence Builder project,
- * starting <Month Day, 2025>.
+ * Written by Ali Saidane (axs220579) for CS 4485, Sentence Builder project,
+ * starting October 22, 2025.
  ******************************************************************************/
 
 package com.sentencebuilder.algorithms.autocomplete;
@@ -63,9 +63,7 @@ public class BigramAutocompleteAlgorithm implements AutocompleteAlgorithm {
 
         // Normalize to the canonical form used in the DB.
         String normalized = lastWord.trim().toLowerCase(Locale.ROOT);
-/*
-Written by <Mehdi Devjani> (<mmd210006>) and <Yousuf Ismail> (<YXI220002>) for <CS4485.0W1>, 
-*/
+
         String sql =
                 "SELECT w2.word_text " +
                 "FROM words w1 " +

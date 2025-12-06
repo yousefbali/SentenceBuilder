@@ -12,7 +12,7 @@
  *   - Fetches suggestions from the database using the selected algorithm.
  *   - Allows the user to accept a suggestion with a mouse click or TAB key.
  *
- * Written by Yousef Ali  for CS 4485.0W1, 
+ * Written by Mehdi Devjani (mmd210006) for CS 4485.0W1, 
  * starting October 23, 2025.
  ******************************************************************************/
 

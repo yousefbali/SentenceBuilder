@@ -13,8 +13,8 @@
  * This produces sentences that are faithful to the training text but still
  * varied across runs.
  *
- * Written by <Your Name> (<Your NetID>) for CS 4485, Sentence Builder project,
- * starting <Month Day, 2025>.
+ * Written by Yoel Kidane (yxk220039) for CS 4485, Sentence Builder project,
+ * starting October 18, 2025.
  ******************************************************************************/
 package com.sentencebuilder.algorithms.sentence;
 
@@ -71,9 +71,7 @@ public class BigramRandomSentenceAlgorithm implements SentenceAlgorithm {
         // We already have one word; extend up to maxWords by sampling bigrams.
         for (int wordIndex = 1; wordIndex < maxWords; wordIndex++) {
             List<Candidate> candidates = new ArrayList<>();
-/*
-Written by <Mehdi Devjani> (<mmd210006>) and <Yousuf Ismail> (<YXI220002>) for <CS4485.0W1>, 
-*/
+
             // Look up the most frequent words that follow the current token.
             try (PreparedStatement ps = c.prepareStatement(
                     "SELECT w2.word_text, r.frequency " +

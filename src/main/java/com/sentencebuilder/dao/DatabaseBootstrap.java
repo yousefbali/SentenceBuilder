@@ -17,8 +17,8 @@
  *       * Delete local db.properties.
  *       * Clear in-memory DB configuration cache.
  *
- * Written by <Your Name> (<Your NetID>) for <Course/Section>, Assignment <N>,
- * starting <Month Day, 2025>.
+ * Written by Yousuf Ismail (yxi220002) for CS 4485.0W1, Senior Project - Sentence Builder,
+ * starting October 18, 2025.
  ******************************************************************************/
 
 package com.sentencebuilder.dao;
@@ -37,9 +37,7 @@ import java.util.stream.Collectors;
 /**
  * Static utility for bootstrapping and resetting the application database.
  */
-/*
-Written by <Mehdi Devjani> (<mmd210006>) and <Yousuf Ismail> (<YXI220002>) for <CS4485.0W1>, 
-*/
+
 public class DatabaseBootstrap {
 
     private DatabaseBootstrap() {

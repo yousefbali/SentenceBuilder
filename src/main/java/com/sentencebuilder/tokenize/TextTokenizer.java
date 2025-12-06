@@ -10,8 +10,8 @@
  *   - Counting word frequencies and n-gram relations.
  *   - Returning a TokenizationResult that can be written to the database.
  *
- * Written by <Your Name> (<Your NetID>) for <Course/Section>, Assignment <N>,
- * starting <Month Day, 2025>.
+ * Written by Yonas Neguse (yxn220013) for <Course/Section>, Assignment <N>,
+ * starting October 18, 2025>.
  ******************************************************************************/
 
 package com.sentencebuilder.tokenize;

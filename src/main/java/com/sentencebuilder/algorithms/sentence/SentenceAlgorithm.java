@@ -13,8 +13,8 @@
  *   - Handling empty/invalid starting text gracefully by choosing a reasonable
  *     starting point from the database if needed.
  *
- * Written by <Your Name> (<Your NetID>) for <Course/Section>, Assignment <N>,
- * starting <Month Day, 2025>.
+ * Written by Yoel Kidane (yxk220039) for CS 4485, Sentence Builder project,
+ * starting October 9, 2025.
  ******************************************************************************/
 
 package com.sentencebuilder.algorithms.sentence;

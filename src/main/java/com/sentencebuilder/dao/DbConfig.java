@@ -13,8 +13,8 @@
  *   - user=sentencegen
  *   - password=sentencegen
  *
- * Written by <Your Name> (<Your NetID>) for <Course/Section>, Assignment <N>,
- * starting <Month Day, 2025>.
+ * Written by Mehdi Devjani (mmd210006) for CS 4485.0W1, Senior Project - Sentence Builder,
+ * starting October 18, 2025.
  ******************************************************************************/
 
 package com.sentencebuilder.dao;
@@ -33,9 +33,7 @@ import java.util.Properties;
  * Simple helper for working with db.properties in the application
  * working directory.
  */
-/*
-Written by <Mehdi Devjani> (<mmd210006>) and <Yousuf Ismail> (<YXI220002>) for <CS4485.0W1>, 
-*/
+
 public final class DbConfig {
 
     // Config file path, for example:

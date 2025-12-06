@@ -11,7 +11,7 @@
  * An optional callback can be supplied to notify other panes (analytics,
  * database viewer, etc.) when new data has been imported.
  *
- * Written by Yousef Ali  for CS 4485.0W1,
+ * Written by Yousuf Ismail (yxi220002) for CS 4485.0W1,
  * starting October 23, 2025.
  ******************************************************************************/
 

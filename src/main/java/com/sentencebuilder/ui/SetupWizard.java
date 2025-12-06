@@ -11,7 +11,7 @@
  * The wizard reports success/failure through the isSuccess() flag so that
  * callers can decide whether to continue launching the main UI.
  *
- * Written by Yousef Ali  for CS 4485.0W1,
+ * Written by Yoel Kidane (yxk220039) for CS 4485, Sentence Builder project,
  * starting October 26, 2025.
  ******************************************************************************/
 

@@ -12,8 +12,8 @@
  * (bigram-based, alliterative, global frequency, etc.) without knowing any of
  * the underlying SQL or probability logic.
  *
- * Written by <Your Name> (<Your NetID>) for CS 4485, Sentence Builder project,
- * starting <Month Day, 2025>.
+ * Written Yoel Kidane (yxk220039) for CS 4485, Sentence Builder project,
+ * starting October 9, 2025.
  ******************************************************************************/
 
 package com.sentencebuilder.algorithms.autocomplete;

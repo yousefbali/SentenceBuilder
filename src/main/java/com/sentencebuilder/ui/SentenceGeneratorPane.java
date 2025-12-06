@@ -11,7 +11,7 @@
  *   - Calls the algorithm with a database connection to generate a sentence.
  *   - Displays the generated sentence in a read-only TextArea.
  *
- * Written by Yousef Ali  for CS 4485.0W1,
+ * Written by Mehdi Devjani (mmd210006) for CS 4485.0W1,
  * starting October 23, 2025.
  ******************************************************************************/
 

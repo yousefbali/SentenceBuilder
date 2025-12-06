@@ -13,8 +13,8 @@
  * only on first-letter alliteration.  It is useful as a contrast to the more
  * statistically grounded n-gram algorithms.
  *
- * Written by <Your Name> (<Your NetID>) for CS 4485, Sentence Builder project,
- * starting <Month Day, 2025>.
+ * Written by Ali Saidane (axs220579) for CS 4485, Sentence Builder project,
+ * starting November 11, 2025.
  ******************************************************************************/
 package com.sentencebuilder.algorithms.sentence;
 
@@ -78,9 +78,7 @@ public class AlliterativeSentenceAlgorithm implements SentenceAlgorithm {
         // Collect candidate words that start with the same first letter, ordered
         // by total frequency so more common words appear more often in the pool.
         List<String> candidates = new ArrayList<>();
-/*
-Written by <Mehdi Devjani> (<mmd210006>) and <Yousuf Ismail> (<YXI220002>) for <CS4485.0W1>, 
-*/
+
         try (PreparedStatement ps = c.prepareStatement(
                 "SELECT word_text " +
                 "FROM words " +

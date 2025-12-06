@@ -10,8 +10,8 @@
  * This object is later used by the import service to write data into the
  * Sentence Builder database schema.
  *
- * Written by <Your Name> (<Your NetID>) for <Course/Section>, Assignment <N>,
- * starting <Month Day, 2025>.
+ * Written by Yonas Neguse (yxn220013) for CS 4485, Sentence Builder project,
+ * starting October 15, 2025.
  ******************************************************************************/
 
 package com.sentencebuilder.tokenize;
