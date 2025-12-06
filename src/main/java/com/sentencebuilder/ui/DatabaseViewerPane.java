@@ -56,8 +56,7 @@ public class DatabaseViewerPane extends BorderPane implements DataRefreshable {
             {"Words",      "words"},
             {"Bigrams",    "word_relations_bigram"},
             {"Trigrams",   "word_relations_trigram"},
-            {"Word Files", "word_files"},
-            {"Metadata",   "metadata"}
+            {"Word Files", "word_files"}
     };
 
     /** Toggle group controlling which logical table is currently selected. */
@@ -458,7 +457,7 @@ public class DatabaseViewerPane extends BorderPane implements DataRefreshable {
         Alert confirm = new Alert(
                 AlertType.CONFIRMATION,
                 "This will delete all application data from the database " +
-                "(files, words, n-grams, and metadata).\n\n" +
+                "(files, words, and n-grams).\n\n" +
                 "Are you sure you want to proceed?",
                 ButtonType.OK,
                 ButtonType.CANCEL
@@ -484,7 +483,6 @@ public class DatabaseViewerPane extends BorderPane implements DataRefreshable {
             stmt.executeUpdate("TRUNCATE TABLE word_files");
             stmt.executeUpdate("TRUNCATE TABLE words");
             stmt.executeUpdate("TRUNCATE TABLE files");
-            // Metadata is intentionally left in place.
 
             currentPage = 0;
             refresh();
@@ -510,4 +508,3 @@ public class DatabaseViewerPane extends BorderPane implements DataRefreshable {
         refresh();
     }
 }
-
